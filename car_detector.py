@@ -25,8 +25,8 @@ while True:
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    scaleFactor = 1.2  # Ajustar este valor según la precisión de la detección
-    minNeighbors = 5    # Ajustar este valor según la precisión de la detección
+    scaleFactor = 1.2  
+    minNeighbors = 5    
 
     cars = car_cascade.detectMultiScale(gray, scaleFactor, minNeighbors, minSize=(50, 50))
 
@@ -55,3 +55,4 @@ print("Total de autos detectados:", vehicles_detected)
 
 vc.release()
 cv2.destroyAllWindows()
+
